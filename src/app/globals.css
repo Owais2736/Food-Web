@@ -2,26 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Inter Tight", sans-serif;
+
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+::-webkit-scrollbar-track {
+    background: #000;
+    border-radius: 10px;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+::-webkit-scrollbar-thumb {
+    background-color: #bbb;
+    border-radius: 10px;
+    border: 2px solid #000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #fff;
+}
+
+
+
+.cards {
+    transition: box-shadow 0.5s ease 0.2s;
+}
+
+.cards:hover {
+    box-shadow: -4px -4px 6px 0px rgba(0, 0, 0, 0.35);
+}
+
+
+.con {
+    width: 100vw;
+}
+
+@media (max-width:420px) {
+    .con {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+
 }
